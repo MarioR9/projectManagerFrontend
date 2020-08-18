@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NbThemeModule, NbLayoutModule, NbCardModule, NbUserModule } from '@nebular/theme';
+import { NbThemeModule, NbLayoutModule, NbCardModule, NbUserModule, NbIconModule } from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 
 
@@ -22,6 +22,7 @@ import { NbEvaIconsModule } from '@nebular/eva-icons';
     BrowserAnimationsModule,
     NbThemeModule.forRoot({ name: 'dark' }),
     NbLayoutModule,
+    NbIconModule,
     NbUserModule,
     NbCardModule,
     NbEvaIconsModule
