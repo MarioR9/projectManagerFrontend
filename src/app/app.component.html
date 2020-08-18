@@ -1,7 +1,19 @@
+<nb-layout>
 
-<app-user-profile>
-  
-</app-user-profile>
+  <nb-layout-header fixed>
+  <!-- Insert header here -->
+  </nb-layout-header>
 
+  <nb-layout-column>
+    
+    <app-user-profile></app-user-profile>
+    <app-projects></app-projects>
+    
+    <router-outlet></router-outlet>
+  </nb-layout-column>
 
-<router-outlet></router-outlet>
+  <nb-layout-footer fixed>
+  <!-- Insert footer here -->
+  </nb-layout-footer>
+
+</nb-layout>
