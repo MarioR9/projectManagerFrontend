@@ -17,7 +17,17 @@ projectsData = [];
       this.projectsData.push(data)
       console.log(this.projectsData)
     })
+    
   }
+ 
+  deleteProject($event){
+    this.http.delete<any>(`http://localhost:8080/api/projects/${$event.currentTarget.parentElement.parentElement.id}`).toPromise().then(data =>{
+      console.log(data)
+    })
+
+  }
+
+  
 
   ngOnInit(): void {
   }

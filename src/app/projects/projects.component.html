@@ -2,13 +2,14 @@
 <div >
 
     <div *ngFor="let project of projectsData[0]">
-        <nb-card status="danger">
-            <nb-card-header>{{ project.name }}</nb-card-header>
+        <nb-card id={{project.id}} status="danger" >
+            <nb-card-header>{{ project.name }} <button (click)="deleteProject($event)" nbButton status="primary"><nb-icon icon="trash-2-outline"></nb-icon></button></nb-card-header>
             <nb-card-body>
               {{ project.description }}
             </nb-card-body>
             <nb-card-footer>Start Date: {{project.startDate}}</nb-card-footer>
-            <nb-card-footer>End Date: {{project.endDate}}</nb-card-footer>
+            <nb-card-footer>End Date: {{project.endDate}} </nb-card-footer>
+            
           </nb-card>
     </div>
 </div>

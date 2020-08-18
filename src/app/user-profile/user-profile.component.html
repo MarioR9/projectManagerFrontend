@@ -1,11 +1,9 @@
- <div className='userDiv'>
+ <div *ngFor="let user of userData[0]">
     <nb-card>
         <nb-card-body>
           <nb-user size="large"
-                   name="John Doe"
-                   title="Engineer"
-                   badgeStatus="success"
-                   badgePosition="bottom right">
+                   name={{user.name}}
+                   title={{user.bio}}>
           </nb-user>
       
         </nb-card-body>
