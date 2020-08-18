@@ -8,6 +8,7 @@ import { ProjectsComponent } from './projects/projects.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NbThemeModule, NbLayoutModule, NbCardModule, NbUserModule, NbIconModule } from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { NbEvaIconsModule } from '@nebular/eva-icons';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     NbThemeModule.forRoot({ name: 'dark' }),

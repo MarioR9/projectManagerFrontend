@@ -1,9 +1,15 @@
-<nb-card status="success">
-    <nb-card-header>Nebula</nb-card-header>
-    <nb-card-body>
-      A nebula is an interstellar cloud of dust, hydrogen, helium and other ionized gases.
-      Originally, nebula was a name for any diffuse astronomical object,
-      including galaxies beyond the Milky Way.
-    </nb-card-body>
-    <nb-card-footer>By Wikipedia</nb-card-footer>
-  </nb-card>
+
+<div >
+
+    <div *ngFor="let project of projectsData[0]">
+        <nb-card status="success">
+            <nb-card-header>{{ project.name }}</nb-card-header>
+            <nb-card-body>
+              {{ project.description}}
+            </nb-card-body>
+            <nb-card-footer>Start Date: {{project.startDate}}</nb-card-footer>
+            <nb-card-footer>End Date: {{project.endDate}}</nb-card-footer>
+          </nb-card>
+    </div>
+</div>
+
