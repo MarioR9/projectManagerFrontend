@@ -2,10 +2,10 @@
 <div >
 
     <div *ngFor="let project of projectsData[0]">
-        <nb-card status="success">
+        <nb-card status="danger">
             <nb-card-header>{{ project.name }}</nb-card-header>
             <nb-card-body>
-              {{ project.description}}
+              {{ project.description }}
             </nb-card-body>
             <nb-card-footer>Start Date: {{project.startDate}}</nb-card-footer>
             <nb-card-footer>End Date: {{project.endDate}}</nb-card-footer>
