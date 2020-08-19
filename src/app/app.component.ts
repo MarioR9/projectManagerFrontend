@@ -15,6 +15,9 @@ export class AppComponent {
 
   }
 postFetch(){
+  const x = {"name":"Tonester","description":"Tonester was build using vanilla javascript for the frontend and rails for the backend. Tonester allows users to save albums using Spotify’s API.","startDate":"July 2019","endDate":"July 2019","githubLink":"https://github.com/MarioR9/tonester_frontend"}
+    console.log(x[name])
+  
   //test data
 let data = {
   name: "Tonester",
@@ -27,7 +30,7 @@ let data = {
     method: 'POST', // or 'PUT'
     headers: {
       'Accept': 'application/json',
-      'Content-Type': 'application/json'
+     'content-type': 'application/x-www-form-urlencoded',
     },
     body: JSON.stringify(data),
   })
