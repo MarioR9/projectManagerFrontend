@@ -9,23 +9,34 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AppComponent {
   title = 'projectManager';
-  
   url = 'http://localhost:8080/api/projects'
  
   constructor(private http: HttpClient){
 
   }
-  postFetch(){
+postFetch(){
+  //test data
+let data = {
+  name: "Tonester",
+  description: "Tonester was build using vanilla javascript for the frontend and rails for the backend. Tonester allows users to save albums using Spotify’s API.",
+  startDate: "July 2019",
+  endDate: "July 2019",
+  githubLink: "https://github.com/MarioR9/tonester_frontend" }
 
-  const headers = { 'Content-Type': 'application/x-www-form-urlencoded'}
-  const body = { 
-      name: "test1",
-      description:"test description",
-      startDate: "now",
-      endDate: "tomorrow",
-      githubLink: "na" }
-  this.http.post<any>('http://localhost:8080/api/projects', body, { headers }).subscribe(data => {
-      console.log(data)
+  fetch('http://localhost:8080/api/projects', {
+    method: 'POST', // or 'PUT'
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(data),
   })
+  .then(response => response.json())
+  .then(data => {
+    console.log('Success:', data);
+  })
+  .catch((error) => {
+    console.error('Error:', error);
+  });
   }
 }

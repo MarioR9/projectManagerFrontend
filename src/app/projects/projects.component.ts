@@ -8,7 +8,6 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ProjectsComponent implements OnInit {
 
-  
 projectsData = [];
 
   url= "http://localhost:8080/api/projects"
@@ -21,13 +20,17 @@ projectsData = [];
   }
  
   deleteProject($event){
-    this.http.delete<any>(`http://localhost:8080/api/projects/${$event.currentTarget.parentElement.parentElement.id}`).toPromise().then(data =>{
-      console.log(data)
-    })
-
+   
+    fetch(`http://localhost:8080/api/projects/${$event.currentTarget.parentElement.parentElement.id}`, {
+      method: 'DELETE'})
+    .then(resp => resp.json())
+    .then(data=>{
+      // debugger
+        console.log(data)
+        
+        })
   }
 
-  
 
   ngOnInit(): void {
   }
