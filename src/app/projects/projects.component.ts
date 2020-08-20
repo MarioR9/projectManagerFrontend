@@ -25,7 +25,7 @@ projectsData = [];
       method: 'DELETE'})
     .then(resp => resp.json())
     .then(data=>{
-      // debugger
+        this.projectsData.push(data)
         console.log(data)
         
         })
