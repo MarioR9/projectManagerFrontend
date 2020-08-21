@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -11,6 +11,8 @@ export class ProjectsComponent implements OnInit {
 projectsData = [];
 
   url= "http://localhost:8080/api/projects"
+
+  
   constructor(private http: HttpClient ){
     this.http.get(this.url).toPromise().then(data =>{
       this.projectsData.push(data)
@@ -22,17 +24,17 @@ projectsData = [];
   deleteProject($event){
    
     fetch(`http://localhost:8080/api/projects/${$event.currentTarget.parentElement.parentElement.id}`, {
-      method: 'DELETE'})
+    method: 'DELETE'})
     .then(resp => resp.json())
     .then(data=>{
         this.projectsData.push(data)
-        console.log(data)
-        
+        //collenctin data from fetch
         })
   }
 
 
-  ngOnInit(): void {
+  ngOnInit() {
+   
   }
 
 }

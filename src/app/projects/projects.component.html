@@ -1,8 +1,7 @@
 
-<div >
-
+<div>
     <div *ngFor="let project of projectsData[0]">
-        <nb-card id={{project.id}} status="danger" >
+        <nb-card id={{project.id}} status="danger">
             <nb-card-header>{{ project.name }} <button (click)="deleteProject($event)" nbButton status="primary"><nb-icon icon="trash-2-outline"></nb-icon></button></nb-card-header>
             <nb-card-body>
               {{ project.description }}

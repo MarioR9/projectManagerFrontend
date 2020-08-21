@@ -15,8 +15,6 @@ export class AppComponent {
 
   }
 postFetch(){
-  //test data
-
 
   fetch('http://localhost:8080/api/projects', {
     method: 'POST', // or 'PUT'
@@ -25,11 +23,11 @@ postFetch(){
       'content-type': 'application/x-www-form-urlencoded',
     },
     body: JSON.stringify({
-      name: "Tonester",
-      description: "Tonester was build using vanilla javascript for the frontend and rails for the backend. Tonester allows users to save albums using Spotify’s API.",
-      startDate: "July 2019",
-      endDate: "July 2019",
-      githubLink: "https://github.com/MarioR9/tonester_frontend"}),
+      name: "test1",
+      description: "test2",
+      startDate: "July test",
+      endDate: "July test",
+      githubLink: "https://test"}),
   })
   .then(response => response.json())
   .then(data => {
@@ -39,4 +37,5 @@ postFetch(){
     console.error('Error:', error);
   });
   }
+
 }
