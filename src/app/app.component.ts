@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { NbDialogService } from '@nebular/theme';
+import { ShowcaseDialogComponent } from './components/showcase-dialog.component';
 
 @Component({
   selector: 'app-root',
