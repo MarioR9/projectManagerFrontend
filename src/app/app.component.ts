@@ -13,7 +13,7 @@ export class AppComponent {
   title = 'projectManager';
   url = 'http://localhost:8080/api/projects'
  
-  constructor(private http: HttpClient){
+  constructor(private http: HttpClient, dialogService: NbDialogService){
 
   }
   
