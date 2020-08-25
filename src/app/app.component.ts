@@ -16,6 +16,15 @@ export class AppComponent {
   constructor(private http: HttpClient){
 
   }
+  
+  open() {
+    this.dialogService.open(ShowcaseDialogComponent, {
+      context: {
+        title: 'Test Dialog component',
+      },
+    });
+  }
+  
 postFetch(){
 
   fetch('http://localhost:8080/api/projects', {
