@@ -23,6 +23,7 @@ export class AppComponent {
         title: 'Test Dialog component',
       },
     });
+    postFetch()
   }
   
 postFetch(){
