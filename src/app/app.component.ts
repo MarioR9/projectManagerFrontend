@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { NbDialogService } from '@nebular/theme';
 import { ShowcaseDialogComponent } from './components/showcase-dialog.component';
@@ -19,9 +19,8 @@ export class AppComponent {
   
   open() {
     this.dialogService.open(ShowcaseDialogComponent, {
-      context: {
-        title: 'Test Dialog component',
-      },
+      //inputFields here for data collection
+      
     });
     
   }
