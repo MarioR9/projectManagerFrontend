@@ -10,7 +10,7 @@ export class ProjectsComponent implements OnInit {
 
 projectsData = [];
 
-  url= "http://localhost:8080/api/projects"
+  url= "http://localhost:8080/api/projects"  //API location
 
   
   constructor(private http: HttpClient ){
