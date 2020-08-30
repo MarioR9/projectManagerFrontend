@@ -23,7 +23,7 @@ projectsData = [];
  
   deleteProject($event){
    
-    fetch(`http://localhost:8080/api/projects/${$event.currentTarget.parentElement.parentElement.id}`, {
+    fetch(`http://localhost:8080/api/projects/${$event.currentTarget.parentElement.parentElement.id}`, { //get id from current div
     method: 'DELETE'})
     .then(resp => resp.json())
     .then(data=>{
