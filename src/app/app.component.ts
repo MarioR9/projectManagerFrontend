@@ -27,7 +27,7 @@ export class AppComponent {
   
 postFetch(){
 
-  fetch('http://localhost:8080/api/projects', {
+  fetch('http://localhost:8080/api/projects', { //api
     method: 'POST', // or 'PUT'
     headers: {
       'Accept': 'application/json',
