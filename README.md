@@ -19,3 +19,5 @@ add new projects and track their progress
 
 - Future fetures => account creation and authentication. 
 - Project collaboration 
+- online chat possbile
+/
