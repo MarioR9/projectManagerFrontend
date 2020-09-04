@@ -21,3 +21,4 @@ add new projects and track their progress
 - Project collaboration 
 - online chat possbile
 /
+//private msgs
