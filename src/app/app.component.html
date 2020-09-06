@@ -1,23 +1,15 @@
 <nb-layout>
-
-  <nb-layout-header fixed>
-  <!-- Insert header here -->
-  </nb-layout-header>
-
-  <nb-layout-column>
-
+  
+  <nb-sidebar>
+  
     <app-user-profile></app-user-profile>
     <button (click)="open()" nbButton status="primary"><nb-icon icon="plus-circle-outline"></nb-icon>New</button>
-    <br/>
-    <br/>
     
+  </nb-sidebar>
+  
+  <nb-layout-column class="colored-column-success">
+  
     <app-projects></app-projects>
-    
-    <router-outlet></router-outlet>
   </nb-layout-column>
-
-  <nb-layout-footer fixed>
-  <!-- Insert footer here -->
-  </nb-layout-footer>
 
 </nb-layout>
