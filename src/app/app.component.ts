@@ -20,7 +20,9 @@ export class AppComponent {
   open() {
     this.dialogService.open(ShowcaseDialogComponent, {
       //inputFields here for data collection
-      
+      <input nbInput></input>
+      <input nbInput></input>
+      <input nbInput></input>
     });
     
   }
