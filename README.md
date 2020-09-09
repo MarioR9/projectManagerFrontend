@@ -10,7 +10,7 @@
 project manager is a tool that will help developer collaborate and plan projects.
 add new projects and track their progress
 
-## Fetures
+## Future fetures
 
 * add new Projects
 * remove current projects
